@@ -9,20 +9,15 @@ logging.basicConfig(level=logging.INFO)
 
 class ServiceRunner(dl.BaseServiceRunner):
 
-    def __init__(self):
-        ...
-
     @staticmethod
     def one(item: dl.Item) -> dl.Item:
         logging.info(f"Running service one on item: {item.id}")
-        item.metadata['service_one'] = 'service one v2'
-        item.update()
-        return item
+        item.metadata['service_one'] = 'service one v1'
+        return item.update()
 
     @staticmethod
     def two(item: dl.Item) -> dl.Item:
         logging.info(f"Running service two on item: {item.id}")
-        item.metadata['service_two'] = 'service two v2'
-        item.update()
-        return item
+        item.metadata['service_two'] = 'service two v1'
+        return item.update()
 
