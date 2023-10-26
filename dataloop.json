@@ -1,7 +1,7 @@
 {
   "displayName": "aaron test app",
   "name": "aaron-test-app",
-  "scope": "project",
+  "scope": "global",
   "version": "1.0.1",
   "codebase": {
     "type": "git",
